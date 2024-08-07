@@ -7,7 +7,6 @@ This project is a web application that allows users to upload a resume and match
 
 ## Features
 
-
 - Upload resume files (PDF format)
 - Select job description category
 - Calculate similarity score between resume and job description
@@ -28,43 +27,49 @@ This project is a web application that allows users to upload a resume and match
    cd Resume-Rec-System
    
 2. **Create and activate a virtual environment (optional but recommended):**
-  ```bash
-  python -m venv venv
-  source venv/bin/activate  # On Windows use `$venv\Scripts\activate`
+  
+    ```bash
+     python -m venv venv
+     source venv/bin/activate  # On Windows use `$venv\Scripts\activate`
 
 3. **Install the required dependencies:**
-  ```bash
-  pip install -r requirements.txt
+  
+    ```bash
+     pip install -r requirements.txt
 
 4. **Set up the MySQL database:**
 - Create a MySQL database named cv-matcher.
 - Create the necessary tables:
-CREATE TABLE files (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    category VARCHAR(255),
-    path VARCHAR(255)
-);
 
-CREATE TABLE similarities (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    category VARCHAR(255),
-    similarity_score FLOAT,
-    resume_terms TEXT,
-    job_desc_terms TEXT
-);
+   ```bash
+   CREATE TABLE files (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       name VARCHAR(255),
+       category VARCHAR(255),
+       path VARCHAR(255)
+   );
+
+   CREATE TABLE similarities (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       name VARCHAR(255),
+       category VARCHAR(255),
+       similarity_score FLOAT,
+       resume_terms TEXT,
+       job_desc_terms TEXT
+   );
 
 - Insert some job description files into the files table.
 
-##Usage
+## Usage
 1. **Run the backend server:**
-  ```bash
-  python backend.py
+  
+    ```bash
+     python backend.py
 
 2. **Run the frontend application:**
-  ```bash
-  streamlit run frontend.py
+  
+    ```bash
+     streamlit run frontend.py
 
 3. **Access the application:**
 Open your web browser and go to http://localhost:8501/
