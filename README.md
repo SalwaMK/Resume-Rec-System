@@ -1,10 +1,12 @@
 # Resume-Job Description Similarity App
 
+
 ## Description
 
 This project is a web application that allows users to upload a resume and match it with a job description to calculate a similarity score. The application uses Flask for the backend, Streamlit for the frontend, and a REST API for communication between the frontend and backend. The similarity score and extracted data are stored in a MySQL database.
 
 ## Features
+
 
 - Upload resume files (PDF format)
 - Select job description category
@@ -14,7 +16,7 @@ This project is a web application that allows users to upload a resume and match
 
 ## Prerequisites
 
-- Python 3.7+
+- Python 3.10
 - MySQL server
 
 ## Installation
@@ -22,8 +24,8 @@ This project is a web application that allows users to upload a resume and match
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/resume-job-description-similarity-app.git
-   cd resume-job-description-similarity-app
+   git clone https://github.com/SawaMk/Resume-Rec-System.git
+   cd Resume-Rec-System
    
 2. **Create and activate a virtual environment (optional but recommended):**
   ```bash
@@ -57,11 +59,11 @@ CREATE TABLE similarities (
 
 ##Usage
 1. **Run the backend server:**
-  ````bash
+  ```bash
   python backend.py
 
 2. **Run the frontend application:**
-  `````bash
+  ```bash
   streamlit run frontend.py
 
 3. **Access the application:**
